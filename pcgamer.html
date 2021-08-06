@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PC Gamer</title>
 
-    <link rel="stylesheet" type="text/css" href="main.css">
-
-<style>
+<style type="text/css">
     h1 {
         text-align: center;
         color: white;
     }
     p {text-align: center;}
-    div {text-align: center;}
+
+    header{
+        text-align: center;
+    }
+    
     h3 {
         text-align: right;
         color:white;
@@ -47,27 +49,87 @@
     a {
         font-weight: bold;
     }
+
+    option {
+        background: #fff;
+    }
 </style>
 
+    
 </head>
 <body>
-    <div><img src="C:\Users\Daniel\project-one\Gameinfo.jpg" alt="Banner"></div>
+    <header>
+        <img src="C:\Users\Daniel\project-one\Gameinfo.jpg" class="centerImage" alt="Banner">
+        <h1> PC Gamer </h1>
+    </header>
+    
+    
+    First Name: <input id="first_name"> 
+    Last Name: <input id="last_name">
+    <button id="say">Say Hello!</button><br><br>
 
-    <h1> PC Gamer </h1>
+    Do you prefer Desktop or Laptop? <input id="gamingPreference">
+    <button id="tell">Submit!</button><br><br>
 
-<<<<<<< HEAD
+    Change background color to:
+    <input type="button" onclick="chBackcolor('red');" value="Red">
+    <input type="button" onclick="chBackcolor('blue');" value="Blue">
+    <input type="button" onclick="chBackcolor('green');" value="Green">
+    <input type="button" onclick="chBackcolor('hotpink');" value="Hot Pink">
+    <input type="button" onclick="chBackcolor('linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 28%, rgba(2,0,36,1) 66%');" value="Default">
+
+    <hr>
+    <div id="result"></div>
+    <hr>
+    <div id="preference"></div><br>
+
+    <script>
+
+    //function runs based on user input from the first_name/last_name input ids
+    function say_hello() {
+        var fname = document.getElementById('first_name').value;
+        var lname = document.getElementById('last_name').value;
+
+        var html = 'Hello <b>' + fname + '</b> ' + lname + '!';
+
+        document.getElementById('result').innerHTML = html;
+    }
+
+    //event listener for the Say Hello button to run the say_hello function
+    document.getElementById('say').addEventListener('click', say_hello);
+
+    function chBackcolor(color) {
+        document.body.style.background = color;
+    }
+
+    //Function runs based on user input from the gamingPreference input id
+    function gamingPreference() {
+        var preference = document.getElementById('gamingPreference').value;
+        var text;
+
+        if (preference == "Desktop"){
+            text = "Prefers <b> " + preference + '</b> ' + "gaming!";
+        }
+        else if (preference == "Laptop"){
+            text = "Prefers <b> " + preference + '</b> ' + "gaming!";
+        }
+        else{
+            text = "Does not like computer gaming :(";
+        }
+
+        document.getElementById('preference').innerHTML = text;
+    }
+
+    //event listener for the submit button to run the gamingPreference function
+    document.getElementById('tell').addEventListener('click', gamingPreference);
+
+    </script>
+
     <a style="padding-left: 400px;" href="C:/Users/Daniel/project-one/project-one/index.html">Home</a><br><br>
     
     <a style="padding-left: 400px;" href="C:/Users/Daniel/project-one/project-one/consolegamer.html">Console Gamer</a><br><br>
     
     <a style="padding-left: 400px;" href="C:/Users/Daniel/project-one/project-one/pcgamer.html">PC Gamer</a><br><br>
-=======
-    <a style="padding-left: 200px;" href="https://danielk13.github.io/project-one/pcgamer.html">Home</a><br><br>
-    
-    <a style="padding-left: 200px;" href="https://danielk13.github.io/project-one/consolegamer.html">Console Gamer</a><br><br>
-    
-    <a style="padding-left: 200px;" href="https://danielk13.github.io/project-one/pcgamer.html">PC Gamer</a><br><br>
->>>>>>> e728f28e9424923aad6de55fae8c0e034d0f7d81
 
     <h3 style="padding-right: 500px;">Pros of Desktop Gaming</h3>
     <ul>
