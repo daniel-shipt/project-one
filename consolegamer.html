@@ -13,8 +13,19 @@
         text-align: center;
         color: white;
     }
-    p {text-align: center;}
-    div {text-align: center;}
+    p {
+        text-align: center;
+        color: white;
+    }
+   
+    div {
+        text-align: center;
+    }
+
+    header {
+        text-align: center;
+    }
+
     h3 {
         text-align: right;
         color:white;
@@ -46,37 +57,51 @@
         font-weight: bold;
         text-decoration: none;
     }
+
+    #userInput{
+        text-align: center;
+    }
     </style>
 
 </head>
 <body>
-    <div><img src="images/Gameinfo.jpg" alt="Banner"></div>
+    <header>
+    <img src="images/Gameinfo.jpg" alt="Banner">
+    </header>
 
     <h1>Console Gamer</h1>
 
-<<<<<<< HEAD
-=======
-
-<!-- <<<<<<< HEAD
->>>>>>> ddb8827fee1003b26f82087f23a4ae4964dec00c
->>>>>>> ff8d7fe7e706152c0ea40b9f1573bd173b0f81d4
     <a style="padding-left: 400px;" href="C:/Users/Daniel/project-one/project-one/index.html">Home</a><br><br>
     
     <a style="padding-left: 400px;" href="C:/Users/Daniel/project-one/project-one/consolegamer.html">Console Gamer</a><br><br>
     
     <a style="padding-left: 400px;" href="C:/Users/Daniel/project-one/project-one/pcgamer.html">PC Gamer</a><br><br>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-======= -->
-    <a style="padding-left: 200px;" href="https://danielk13.github.io/project-one/index.html">Home</a><br><br>
-    
-    <a style="padding-left: 200px;" href="https://danielk13.github.io/project-one/consolegamer.html">Console Gamer</a><br><br>
-    
-    <a style="padding-left: 200px;" href="https://danielk13.github.io/project-one/pcgamer.html">PC Gamer</a><br><br>
 
->>>>>>> ff8d7fe7e706152c0ea40b9f1573bd173b0f81d4
+    <p>How many Playstations would you like to see? Pick a number between 1 and 50!</p>
+
+    <div id="userInput">
+        <input id="image" type="number" min="0" max="50">
+        <button onclick="displayConsole()">Click me!</button>
+    <div>
+    
+    <hr>
+
+    <p id="result"></div>
+
+    <script>
+        function displayConsole(){
+            var imageAmnt = document.getElementById("image").value;
+            var image = imageAmnt;
+            let counter = 1;
+            let i = 0;
+            
+            for(let i=0; i<image; i++){
+                document.write(`<img src="images/playstation.png" width=200px; height=200px;>` + counter);
+                counter++;
+            }
+                  
+        }
+    </script>
 
 </body>
 </html>
